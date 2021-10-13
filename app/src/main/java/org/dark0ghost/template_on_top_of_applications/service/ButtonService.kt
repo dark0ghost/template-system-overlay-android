@@ -20,7 +20,6 @@ class ButtonService: Service() {
     private lateinit var params: WindowManager.LayoutParams
     private lateinit var topView: RelativeLayout
     private lateinit var button: Button
-    private lateinit var edge: View
 
     override fun onCreate() {
         super.onCreate();
@@ -54,6 +53,5 @@ class ButtonService: Service() {
     override fun onDestroy() {
         super.onDestroy()
         windowManager.removeView(topView)
-        windowManager.removeView(edge)
     }
 }
